@@ -26,13 +26,11 @@ body {
 
 .main-header {
     margin-bottom: 60px;
-    color: #ffffff;
+    color: #ffffff;				/* Дополнительное переопределение цвета*/
     background-color: #000000;
     /*border: 2px solid red;  */
     
 }
-
-
 
 .container {
     width: 940px;   /* должно быть 940 */
@@ -97,6 +95,11 @@ body {
     height: 5px;
     
     background-color: #ffffff;
+}
+
+.main-navigation .active span {
+	display: block;
+	padding: 25px 20px;
 }
 
 .main-navigation .logo-inner {
@@ -369,6 +372,41 @@ body {
     clear: both;
     width: 100%;
     margin-top: 11px;           /* выравнивание кнопки по уровню кнопок соседнего блока */
+}
+
+/* Стили для контентных тегов */
+
+.big-heading {
+	margin-top: 55px;
+	margin-bottom: 65px;
+	
+	text-align: center;
+}
+
+.big-heading h2 {
+	position: relative;
+	z-index: 2;
+	
+	display: inline-block;
+	margin: 0;
+	padding: 0 25px;
+	
+	font-size: 48px;
+	line-height: 48px;
+	text-align: center;
+	
+	background: #f8f3f0 url("../img/pattern-white.jpg") repeat;
+}
+
+.big-heading::after {
+	content: "";
+	position: relative;
+	top: -25px;
+	z-index: 1;
+	
+	display: block;
+	
+	border-bottom: 2px solid #000000;
 }
 
 .main-footer {
