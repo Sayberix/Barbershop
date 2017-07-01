@@ -15,7 +15,7 @@ body {
 .inner-page {
     color: #000000;
     
-    background: #f8f3f0 url("img/patern-white.jpg") repeat;
+    background: #f8f3f0 url("../img/patern-white.jpg"); repeat;
 }
 
 .inner-page-title {
@@ -88,6 +88,8 @@ body {
 	
 	border: 2px solid #000000;
 }
+
+/* ------ */
 
 .breadcrums a {
 	color: #000000;
@@ -273,7 +275,7 @@ body {
     position: relative;
     
     display: block;
-    margin-bottom: 30px;            /* отступы0 позволяющие   */
+    margin-bottom: 30px;            /* отступы позволяющие   */
     padding-bottom: 35px;           /* добавить строку в элемент .features-name */
     
     font-size: 30px;
@@ -454,7 +456,7 @@ body {
     margin-top: 11px;           /* выравнивание кнопки по уровню кнопок соседнего блока */
 }
 
-/* Стили для контентных тегов */
+/* Особые стили для контентных тегов */
 
 .big-heading {				/* Оформление промо-заголовка */
 	margin-top: 55px;
@@ -667,4 +669,177 @@ body {
 
 .footer-copyright .btn {
     margin-right: 0;
+}
+
+.modal-content {		/* модальное окно для входа в личный кабинет */
+	position: absolute;
+	top: 120px;
+	left: 50%;
+	
+	width: 300px;
+	margin-left: -230px;	/* центровка по середине	*/
+	padding: 50px 80px;
+	
+	color: #000000;
+	
+	background: #f8f3f0 url("../img/pattern-white.jpg");
+	
+	box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+}
+
+.modal-content-close {
+	position: absolute;
+	top: 0;
+	right: -34px;
+	
+	width: 22px;
+	height: 22px;
+	
+	font-size: 0;
+	
+	background-color: transparent;
+	border: 0;
+	outline: none;
+	cursor: pointer;
+}
+
+.modal-content-close::before,	/* значок крестика - */
+.modal-content-close::after {	/* - закрытие */
+	content: "";
+	position: absolute;
+	top: 10px;
+	left: 2px;
+	
+	width: 19px;
+	height: 3px;
+	background-color: #d0d0d0;
+	border-radius: 1px;
+}
+
+.modal-content-close::before {
+	transform: rotate(45deg);
+}
+
+.modal-content-close::after {
+	transform: rotate(-45deg);	/* ---- */
+}
+
+.modal-content h2 {
+	margin: 0;
+	margin-bottom: 20px;
+	
+	font-size: 30px;
+	line-height: 42px;
+}
+
+.modal-content p {
+	margin: 0;
+	margin-bottom: 14px;
+}
+
+.modal-content .login-form {
+	margin-top 30px;
+	margin-bottom: 10px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+	width: 236px;
+	margin: 0;
+	margin-bottom: 10px;
+	padding: 10px 20px;
+	padding-right: 40px;
+	
+	font-size: 14px;
+	line-height: 24px;
+	font-family: "PT Sans Narrow", "Arial", sans-serif;
+	color: #000000;
+	text-transform: uppercase;
+
+	background-color: #f9f6f3;
+	border: 2px solid #000000;
+	outline: none;
+}
+
+.login-form input:focus {
+	border-color: #663d15;
+}
+
+.login-form input.icon-user {
+	background-image: url("../img/account-sprite.png");
+	background-repeat: no-repeat;
+	background-position: 95% 0;
+}
+
+.login-form input.icon-password {
+	background-image: url("../img/account-sprite.png");
+	background-repeat: no-repeat;
+	background-position: 95% -33px;
+}
+
+.login-form .restore {
+	float: right;
+	
+	color: #000000;
+}
+
+.restore:hover {
+	text-decoration: none;
+	color: #663d15;
+}
+
+.login-form .btn {
+	width: 100%;
+	margin-top: 15px;
+}
+
+.login-checkbox input[type="checkbox"] {
+	display: none;
+}
+
+.login-checkbox {
+	position: relative;
+	padding-left: 30px;
+	cursor: pointer;
+}
+
+.login-checkbox:hover {
+	color: #663d15;
+}
+
+.login-checkbox input[type="checkbox"] +
+.checkbox-indicator {
+	position: absolute;
+	top: -3px;
+	left: 0;
+	
+	width: 17px;
+	height: 17px;
+	
+	border: 2px solid #000000;
+}
+
+.login-checkbox input[type="checkbox"]
+:checked + .checkbox-indicator::before,
+.login-checkbox input[type="checkbox"]
+:checked + .checkbox-indicator::after {
+		content: "";
+		position: absolute;
+		top: 8px;
+		left: 1px;
+			
+		width: 15px;
+		height: 2px;
+			
+		background-color: #000000;
+}
+
+.login-checkbox input[type="checkbox"]
+:checked + .checkbox-indicator::before {
+	transform: rotate(45deg);
+}
+
+.login-checkbox input[type="checkbox"]
+:checked + .checkbox-indicator::after {
+	transform: rotate(-45deg);
 }
