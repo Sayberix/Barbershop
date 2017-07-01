@@ -1,0 +1,670 @@
+body {
+    min-width: 960px;
+    
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    font-family: "PT Sans Narrow", "Arial", sans-serif;
+    color: #ffffff;
+    text-transform: uppercase;
+    
+    background: #000000 url(../img/body_bg.jpg) no-repeat center top;
+/*    background-size: 1122px auto; */
+}
+
+.inner-page {
+    color: #000000;
+    
+    background: #f8f3f0 url("img/patern-white.jpg") repeat;
+}
+
+.inner-page-title {
+	margin-bottom: 55px;
+}
+
+.inner-page-title h1 {
+	margin: 0;
+	margin-bottom: 20px;
+	padding: 0;
+	
+	font-size: 30px;
+	line-height: 42px;
+}
+
+.breadcrums {
+	margin: 0;
+	padding: 0;
+	
+	list-style: none;
+}
+
+.breadcrums li {
+	position: relative;
+	
+	display: inline;
+	padding-right: 40px;
+}
+
+.breadcrums li:after {
+	content: "";
+	position: absolute;
+	top: 4px;
+	right: 15px;
+	width: 8px;
+	height: 8px;
+	
+	background-color: #000000;
+	transform: rotate(45deg);
+}
+
+.breadcrums .current::after {	/* убираем ромб после пункта "прайс-лист" */
+	display: none;	/* можно использовать "content: none" */
+}
+
+/* Общие стили для контекстных тегов	*/
+
+.inner-content {
+	margin-bottom: 75px;
+}
+
+.inner-content h2 {
+	margin-top: 60px;
+	margin-bottom: 30px;
+	
+	font-size: 24px;
+	line-height: 30px;
+}
+
+.inner-content p {
+	margin: 14px 0;
+}
+
+.inner-content table {
+	border-collapse: collapse;
+}
+
+.inner-content td {
+	padding: 10px 15px;
+	
+	border: 2px solid #000000;
+}
+
+.breadcrums a {
+	color: #000000;
+	text-decoration: none;
+}
+
+.breadcrums .current {
+	color: #aba9a7
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.main-header {
+    margin-bottom: 60px;
+    color: #ffffff;				/* Дополнительное переопределение цвета*/
+    background-color: #000000;
+    /*border: 2px solid red;  */
+    
+}
+
+.container {
+    width: 940px;   /* должно быть 940 */
+    margin: 0 auto;
+    padding: 0 10px;
+ /*   border: 1px solid green;    */
+}
+
+.main-navigation {
+  /*  position: relative;
+    display: inline-table;  */
+    float: left;
+    width: 780px;
+    /*border: 2px solid lightblue; */
+}
+
+.main-navigation ul {
+    margin: 0;
+    padding: 0;
+    
+    list-style: none;
+    font-size: 0;
+}
+
+.main-navigation li {
+    display: inline-block;
+    
+    font-size: 16px;
+    line-height: 20px;
+    vertical-align: top;
+}
+    
+.main-navigation a {
+    display: block;
+    padding: 25px 20px;
+    
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.main-navigation a:hover {
+    background: #242424;
+}
+
+.main-navigation .active {
+    position: relative;
+    
+    background-color: none;
+}
+
+.main-navigation .active a:hover {
+    background: none;
+}
+
+.main-navigation .active a:hover::after {
+    content: "";
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+    left: 20px;
+    
+    height: 5px;
+    
+    background-color: #ffffff;
+}
+
+.main-navigation .active span {
+	display: block;
+	padding: 25px 20px;
+}
+
+.main-navigation .logo-inner {
+    float: left;
+    width: 111px;
+    height: 20px;
+    padding-top: 22px;
+}
+
+.main-navigation .logo-inner img{
+    width: 111px;
+    height: 24px;
+}
+
+.main-navigation .logo-inner:hover{
+    background: none;
+}
+
+.user-block {
+    float: right;
+    max-width: 140px;
+    /*border: 2px solid blue;    */
+}
+
+.login {
+    position: relative;
+    
+    display: inline-block;
+    padding: 25px 20px;
+    padding-left: 50px;
+    
+    font-size: 16px;
+    line-height: 20px;
+    vertical-align: top;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.login:hover {
+    background: #242424;
+}
+
+.login::before {
+    content: "";
+    position: absolute;
+    top: 28px;
+    left: 20px;
+        
+    width: 18px;
+    height: 16px;
+    
+    background: url("../img/.icon-login.png") no-repeat;
+    opacity: 0.5;
+} 
+
+.login:hover::before {
+    opacity: 1;
+}
+
+.index-logo {
+    width: 368px;
+    height: 204px;
+    margin-right: auto;     /* Центровка по     */
+    margin-left: auto;      /* середине         */
+    margin-bottom: 25px;
+}
+
+.features {
+    margin-bottom: 80px;
+    /*border: 1px solid yellow;   */
+}
+
+.features-item {
+    float: left;
+    width: 300px;       /* Должно быть 300 */
+    margin-right: 20px;
+    text-align: center;
+    /*border: 1px solid yellow;   */
+}
+
+.features-item:last-child {
+    margin-right: 0;
+}
+
+.features-item p {
+    margin: 10px;
+    margin-bottom: 0px;
+}
+
+.features-name {
+    position: relative;
+    
+    display: block;
+    margin-bottom: 30px;            /* отступы0 позволяющие   */
+    padding-bottom: 35px;           /* добавить строку в элемент .features-name */
+    
+    font-size: 30px;
+    line-height: 42px;
+    /*border: 1px solid blue; */
+}
+
+.features-name::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    
+    display: block;                     /* квадрат для дальнейшего преобразования в ромбик */
+    width: 20px;
+    height: 20px;
+    margin-left: -10px;
+    
+    background-color: #ffffff;
+    transform: rotate(45deg);           /* поворот ромбика */
+}
+
+.index-content {
+    margin-bottom: 35px;
+    padding: 50px 80px;
+    
+    color: #000000;
+    
+    background:
+        url("../img/index-content-shadow.png") no-repeat center, /* полоска тени в центре */
+        #f8f5f2 url("../img/pattern-white.jpg");                 /* фон прописанный цветом если изображение не загрузится */
+/*    border: 1px solid blue;  */
+}
+
+.index-content-left {
+    float: left;
+    width: 379px;           /* Должно быть 380 */
+/*    min-height: 330px;    */
+/*    border: 1px solid red;  */
+}
+
+.index-content-right {
+    float: right;
+    width: 299px;           /* должно быть 300  */
+/*    min-height: 330px;    */
+/*    border: 1px solid red;  */
+}
+
+.index-content-title {
+    margin: 0;
+    margin-bottom: 25px;
+    
+    font-size: 30px;
+    line-height: 42px;
+}
+
+.index-content p  {
+    margin: 0;
+    margin-bottom: 25px;
+}
+
+.news-preview {
+    margin: 0;
+    padding: 0;
+    padding-right: 35px;
+    
+    list-style: none;
+}
+
+.news-preview li {
+    margin-bottom: 25px;
+}
+
+.news-preview p {
+    margin-bottom: 0;
+}
+
+.news-preview time {
+    text-transform: none;
+    font-weight: 400;               /* шрифт не жирный */
+}
+
+.btn {                              /* унивесальный класс для кнопок */
+    display: inline-block;
+    margin-right: 16px;
+    padding: 10px 33px;
+    
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    font-family: "PT Sans Narrow","Arial", sans-serif;
+    vertical-align: top;
+    text-align: center;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+    
+    background-color: #000000;
+    border: 10px;                   /* необходимые свойства для */
+    outline: none;                  /* для элемента button */
+    cursor: pointer;
+}
+
+.btn:hover,
+.btn:active {
+    background-color: #663d15;
+}
+
+.btn.disabled:hover,
+.btn.disabled:hover {
+    background-color: #000000;
+}
+
+.gallery {
+    position: absolute;
+    
+    height: 260px;
+}
+
+.gallery-content {
+    height: 164px;
+    margin: 0;
+    
+    background-color: #cccccc;      /* фон для отображение без загрузки картинки */
+    border: 7px solid #ffffff;		/* рамка для картинки из галлереи */
+}
+
+.gallery-content img {
+    width: 286px;
+    height: 164px;
+}
+
+.gallery .btn {
+    position: absolute;
+    bottom: 0;
+    
+    width: 140px;
+    margin: 0;
+}
+
+.gallery-prev {
+    left: 0;
+}
+
+.gallery-next {
+    right: 0;
+}
+
+.appointment-form input {
+    float: left;
+    width: 106px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 7px 15px;
+    
+    font-size: 14px; */
+    line-height: 24px; */
+    font-family: "PT Sans Narrow", "Arial", sans-serif;*/
+    color: #000000; */
+    text-transform: uppercase; */
+    
+    background-color: #f9f6f3;
+    border: 1px soid #000000;
+    outline: none;
+}
+
+.appointment-form input:focus {
+    border: 2px solid #663d15;
+}
+
+.appointment-form input:nth-child(2n) {
+    margin-right: -1px;                     /* должен быть "0" */
+}
+
+.appointment-form .btn {
+    clear: both;
+    width: 100%;
+    margin-top: 11px;           /* выравнивание кнопки по уровню кнопок соседнего блока */
+}
+
+/* Стили для контентных тегов */
+
+.big-heading {				/* Оформление промо-заголовка */
+	margin-top: 55px;
+	margin-bottom: 65px;
+	
+	text-align: center;
+}
+
+.big-heading h2 {
+	position: relative;
+	z-index: 2;
+	
+	display: inline-block;
+	margin: 0;
+	padding: 0 25px;
+	
+	font-size: 48px;
+	line-height: 48px;
+	text-align: center;
+	
+	background: #f8f3f0 url("../img/pattern-white.jpg") repeat;
+}
+
+.big-heading::after {
+	content: "";
+	position: relative;
+	top: -25px;
+	z-index: 1;
+	
+	display: block;
+	
+	border-bottom: 2px solid #000000;
+}
+
+.custom-list-1 {
+	margin: 14px 0;
+	padding: 0;
+	
+	list-style: none;
+}
+
+.custom-list-1 li {
+	position: relative;
+	
+	margin-bottom: 15px;
+	padding-left: 20px;
+}
+
+.custom-list-1 li:before {
+	content: "";
+	position: absolute;
+	top: 8px;
+	left: 0;
+	
+	width: 8px;
+	height: 8px;
+	
+	background-color: #000000;
+	transform: rotate(45deg);
+}
+
+.prices-table {
+	width: 100%;
+}
+
+.prices-table td {
+	width: 50%;
+}
+
+.prices-table td:last-child {		/* текст в последнем столбце по центру	*/
+	text-align: center;
+}
+
+.short-text {					/* для корректного переноса строки	*/
+	padding-right: 80px;		/* можно использовать ширину абзацев	*/
+}								/* не нужно использовать лишние <BR>	*/
+
+/* Колонки для контента	*/
+
+.inner-columns {
+	margin: 60px 0;
+}
+
+.inner-column-left,
+.inner-column-right {
+	width: 460px;
+}
+
+.inner-column-left {
+	float: left;
+}
+
+.inner-column-right {
+	float: right;
+}
+
+.inner-column-left *:first-child,		/* убираем лишние верхние отступы */
+.inner-column-right *:first-child {		/* образованные оборачиванием в колонки */
+	margin-top: 0;
+}
+
+.inner-column-left *:last-child,		/* убираем лишние нижние отступы */
+.inner-column-right *:last-child {		/* образованные оборачиванием в колонки */
+	margin-bottom: 0;
+}
+
+.main-footer {
+    margin-top: 65px;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    
+    color: #ffffff;         /* лучше явно прописать везде для футера */
+    
+    background: #252525 url("../img/pattern-black.jpg");
+ /*   border: 1px solid red;  */
+}
+
+.footer-contacts {
+    float: left;
+    width: 320px;
+    margin-right: 60px;
+    /* Только для оформления сетки  */
+    min-height: 90px;
+ /*   border: 1px solid yellow;	*/
+}
+
+.footer-contacts a {
+    color: #ffffff;
+}
+
+.footer-contacts a:hover {
+    text-decoration: none;
+}
+
+.footer-social {
+    float: left;
+    width: 180px;
+    /*
+    margin-right: 60px;
+     Только для оформления сетки
+    min-height: 90px;
+    */
+    text-align: center;
+ /*   border: 1px solid green;	*/
+}
+
+.footer-copyright {
+    float: right;
+    width: 148px;				/* Должно быть 140 */
+    /*	min-height: 90px;		/* Только для оформления сетки */
+  /*  border: 1px solid yellow;	*/
+}
+
+.footer-social p {
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.social-btn {
+    display: inline-block;
+    width: 43px;
+    height: 43px;
+    margin: 0 2px;
+    
+    font-size: 0;
+    vertical-align: top;
+    text-decoration: none;
+    
+    background: #000000 url("../img/social-sprite.png") no-repeat center;
+	
+	transition:							/* эффект аннимации, работает */
+		background-position 0.5s,		/* только с "center" */
+		background-color 0.5s;
+}
+
+.social-btn:hover {
+    background-color: #ffffff;
+}
+
+.social-btn-vk {
+    background-position: 9px 0;
+}
+
+.social-btn-fb {
+    background-position: -42px 0;
+}
+
+.social-btn-inst {
+    background-position: -89px 0;
+}
+
+.social-btn-vk:hover {
+    background-position: 10px -22px;
+}
+
+.social-btn-fb:hover {
+    background-position: -42px -22px;
+}
+
+.social-btn-inst:hover {
+    background-position: -89px -22px;
+}
+
+.footer-copyright p {
+    margin: 0;
+    margin-bottom: 15px;
+    
+    text-align: center;
+}
+
+.footer-copyright .btn {
+    margin-right: 0;
+}
