@@ -671,11 +671,13 @@ body {
     margin-right: 0;
 }
 
-.modal-content {		/* модальное окно для входа в личный кабинет */
+.modal-content {			/* модальное окно для входа в личный кабинет */
 	position: absolute;
 	top: 120px;
 	left: 50%;
 	
+	display: none;			/* скрываем модальное окно	*/
+
 	width: 300px;
 	margin-left: -230px;	/* центровка по середине	*/
 	padding: 50px 80px;
@@ -703,7 +705,7 @@ body {
 	cursor: pointer;
 }
 
-.modal-content-close::before,	/* значок крестика - */
+.modal-content-close::before,	/* значок крестика формы модального окна - */
 .modal-content-close::after {	/* - закрытие */
 	content: "";
 	position: absolute;
@@ -819,10 +821,10 @@ body {
 	border: 2px solid #000000;
 }
 
-.login-checkbox input[type="checkbox"]
-:checked + .checkbox-indicator::before,
-.login-checkbox input[type="checkbox"]
-:checked + .checkbox-indicator::after {
+.login-checkbox input[type="checkbox"]:checked + 	/* отрисовка составляющих элементов для ...	*/
+.checkbox-indicator::before,
+.login-checkbox input[type="checkbox"]:checked + 	/* крестика - по нажатию - "запомните меня"	*/
+.checkbox-indicator::after {
 		content: "";
 		position: absolute;
 		top: 8px;
@@ -834,12 +836,12 @@ body {
 		background-color: #000000;
 }
 
-.login-checkbox input[type="checkbox"]
-:checked + .checkbox-indicator::before {
+.login-checkbox input[type="checkbox"]:checked + 	/* отрисовка крестика по нажатию "запомните меня" */
+.checkbox-indicator::before {
 	transform: rotate(45deg);
 }
 
-.login-checkbox input[type="checkbox"]
-:checked + .checkbox-indicator::after {
+.login-checkbox input[type="checkbox"]:checked + 	/* отрисовка крестика по нажатию "запомните меня" */
+.checkbox-indicator::after {
 	transform: rotate(-45deg);
 }
