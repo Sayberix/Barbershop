@@ -672,9 +672,13 @@ body {
 }
 
 .modal-content {			/* модальное окно для входа в личный кабинет */
-	position: absolute;
+	/*position: absolute;
 	top: 120px;
+	left: 50%;*/
+	position: fixed;
+	top: 50%;
 	left: 50%;
+	margin-top: -193px;
 	
 	z-index: 20;
 	
@@ -696,8 +700,8 @@ body {
 	top: 50%;
 	left: 50%;
 	
-	display: none;
 	z-index: 20;
+	display: none;
 	
 	width: 766px;
 	height: 561px;
@@ -709,16 +713,33 @@ body {
 	box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
 }
 
+@keyframes bounce {								/*	анимация для открытия ...	*/
+	0% { transform: translateY(-2000px); }		/*	модального окна	*/
+	70% { transform: translateY(30px); }
+	90% { transform: translateY(-10px); }
+	100% { transform: translateY(0); }
+}
+
+.modal-content-show {
+	display: block;
+	animation: bounce 0.6s;						/*	запуск анимации	открытия модального окна */
+}
+
 .modal-overlay {				/* оверлей	*/
 	position: fixed;
 	top: 0;
 	left: 0;
 	z-index: 10;
 	
+	display: none;				/* по-умолчанию не отображается	*/
 	width: 100%;
 	height: 100%;
 	
 	background: rgba(0, 0, 0, 0.8);
+}
+
+.modal-overlay-show {
+	display: block;
 }
 
 .modal-content-close {			/* отрисока кнопки закрытия	*/
@@ -756,6 +777,16 @@ body {
 
 .modal-content-close::after {
 	transform: rotate(-45deg);	/* ---- */
+}
+
+@keyframes shake {
+	0%, 100% { transform: translateX(0); }
+	10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+	20%, 40%, 60%, 80% { transform: translateX(10px); }
+}
+
+.modal-error {
+	animation: shake 0.6s;
 }
 
 .modal-content h2 {
