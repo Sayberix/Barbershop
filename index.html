@@ -91,7 +91,7 @@
                         пн - пт: с 10:00 до 22:00<br>
                         сб - вс: с 10:00 до 19:00<br>
                     </p>
-                    <a class="btn" href="#">Как проехать</a>
+                    <a class="btn js-open-map" href="#">Как проехать</a>
                     <a class="btn" href="#">Обратная связь</a>
                 </div>
                 <div class="index-content-right">
@@ -150,68 +150,8 @@
 		</div>
 		<div class="modal-overlay"></div>
 		
+		<script src="js/script.js"></script>
+		<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Adc9f3f8241da1666cdb2509b3a648ca72bbc96bcb7ab0afc12a1cd0064291e16&amp;width=766&amp;height=561&amp;lang=ru_RU&amp;scroll=true&id=yandex-map"></script>
 		
-		<script>
-			var link = document.querySelector(".login");
-			var popup = document.querySelector(".modal-content");
-			var overlay = document.querySelector(".modal-overlay");
-			var close_popup = popup.querySelector(".modal-content-close");
-			var login = popup.querySelector("[name=login]");
-			var password = popup.querySelector("[name=password]");
-			var form = popup.querySelector("form");
-			
-			var storage = localStorage.getItem("login");
-			
-						
-			link.addEventListener("click", function(evt){
-				evt.preventDefault();
-				console.log("Клик по ссылке вход");
-				popup.classList.add("modal-content-show");
-				overlay.classList.add("modal-overlay-show");
-				
-				if (storage) {
-					login.value = storage;
-					password.focus();
-					console.log("Фокусровка на поле 'Пароль'");
-				} else {
-					login.focus();
-					console.log("Фокусровка на поле 'Логин'");
-				}
-			});
-			
-			form.addEventListener("submit", function(evt){
-				if (!login.value || !password.value){
-					evt.preventDefault();		
-					console.log("Нужно ввести логин и пароль");
-					popup.classList.add("modal-error")}
-				else {
-					localStorage.setItem("login", login.value);
-				}
-			});
-			
-			close_popup.addEventListener("click", function(evt){
-				evt.preventDefault();
-				console.log("Клик по кнопке закрыть");
-				popup.classList.remove("modal-content-show");
-				overlay.classList.remove("modal-overlay-show");
-				popup.classList.remove("modal-error");
-			});
-			
-			window.addEventListener("keydown", function(evt) {
-				if (event.keyCode === 27) {
-					if (popup.classList.contains("modal-content-show")) {
-					popup.classList.remove("modal-content-show");
-					overlay.classList.remove("modal-overlay-show");
-					console.log("Нажатие ESC - закрытие модального окна");
-		 			}
-				}
-			});
-			
-			overlay.addEventListener("click", function(evt){
-				popup.classList.remove("modal-content-show");
-				overlay.classList.remove("modal-overlay-show");
-				console.log("Клик по оверлею - закрытие модального окна");
-			});
-		</script>
    </body>
 </html>
