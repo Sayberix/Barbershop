@@ -1,3 +1,9 @@
+var html = document.documentElement;							<!-- определение работающего JS -->
+html.className = html.className.replace ("no-js", "js");
+
+var prev = document.querySelector(".gallery-prev");				<!-- попытался сделать неактивную кнопку ( -->
+prev.setAttribute('disabled', 'disabled');
+
 <!-- модальное окно входа в личный кабинет	-->
 	var link = document.querySelector(".login");
 	var popup = document.querySelector(".modal-content");

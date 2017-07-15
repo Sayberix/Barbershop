@@ -424,6 +424,14 @@ body {
     right: 0;
 }
 
+.no-js .gallery .btn {		
+	display: none;			/*	Прячем кнопки если JS отключен	*/
+}
+
+.js .gallery .btn {
+	display: block;			/*	Показываем кнопки, JS - включен	*/
+}
+
 .appointment-form input {
     float: left;
     width: 106px;
